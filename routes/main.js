@@ -6,13 +6,15 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    res.sendFile(__path + '/views/home.html')
+    res.sendFile(__path + '/index.html')
 })
 
 router.get('/api', (req, res) => {
     res.sendFile(__path + '/index.html')
 })
-
+router.get('/api/pricing', (req, res) => {
+    res.sendFile(__path + '/pricing.html')
+})
 router.get('/api/status', async(req, res) => {  
 
 var date = new Date
