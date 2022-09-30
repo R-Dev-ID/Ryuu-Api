@@ -6,14 +6,16 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    res.sendFile(__path + '/index.html')
+    res.sendFile(__path + '/views/home.html')
 })
-
+router.get('/docs', (req, res) => {
+    res.sendFile(__path + '/views/index.html')
+})
 router.get('/api', (req, res) => {
-    res.sendFile(__path + '/index.html')
+    res.sendFile(__path + '/views/index.html')
 })
 router.get('/api/pricing', (req, res) => {
-    res.sendFile(__path + '/pricing.html')
+    res.sendFile(__path + '/views/pricing.html')
 })
 router.get('/api/status', async(req, res) => {  
 
